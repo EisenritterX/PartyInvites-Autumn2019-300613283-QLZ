@@ -7,13 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace PartyInvites_Autumn2019_300613283_QLZ.Controllers
 {
     public class HomeController : Controller
-{
+    {
         //default action method
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
-            return View("Index");
+            return View();
         }
-}
+
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
+
+
+    }
 }
