@@ -1,0 +1,36 @@
+﻿@model IEnumerable<PartyInvites_Autumn2019_300613283_QLZ.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+</head>
+<body>
+    <h1>Here is the list of people attending the party</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PartyInvites_Autumn2019_300613283_QLZ.Models.GuestResponse r in Model)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p><a asp-action="Index">Click here</a> to go back to the Home Page</p>
+</body>
+</html>

@@ -27,7 +27,12 @@ namespace PartyInvites_Autumn2019_300613283_QLZ.Controllers
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
             Repository.AddResponse(guestResponse);
-            return View();
+            return View("Thanks", guestResponse);
+        }
+
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses.Where(r => r.WillAttend == true));
         }
 
     }
