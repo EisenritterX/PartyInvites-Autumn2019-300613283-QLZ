@@ -9,28 +9,32 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Responses</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
 </head>
 <body>
-    <h1>Here is the list of people attending the party</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (PartyInvites_Autumn2019_300613283_QLZ.Models.GuestResponse r in Model)
-            {
+    <div class="panel-body">
+        <h1>Here is the list of people attending the party</h1>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
                 <tr>
-                    <td>@r.Name</td>
-                    <td>@r.Email</td>
-                    <td>@r.Phone</td>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    <p><a asp-action="Index">Click here</a> to go back to the Home Page</p>
+            </thead>
+            <tbody>
+
+                @foreach (PartyInvites_Autumn2019_300613283_QLZ.Models.GuestResponse r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Email</td>
+                        <td>@r.Phone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p><a class="nav-link" asp-action="Index">Click here</a> to go back to the Home Page</p>
 </body>
 </html>

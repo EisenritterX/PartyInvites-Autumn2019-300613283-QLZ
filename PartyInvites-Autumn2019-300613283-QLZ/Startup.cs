@@ -25,7 +25,8 @@ namespace PartyInvites_Autumn2019_300613283_QLZ
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //wwwroot folder
+            app.UseStaticFiles();
                 app.UseMvcWithDefaultRoute();
         }
     }
